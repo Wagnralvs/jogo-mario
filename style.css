@@ -9,6 +9,7 @@ body{
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr;
+    grid-template-rows: 80% 10%;
      gap: 4rem;
      width: 100%;
      height: 41rem;
@@ -27,7 +28,7 @@ body{
 }
 .content{
     width: 90%;
-    height: 400px;
+    height: 100%;
     border: 2px solid rgb(89, 82, 82);
     overflow: hidden;
     border-radius: 8px;
@@ -54,7 +55,6 @@ body{
     width: 3rem;
     bottom: 0;
     right: 0px;
-    /* left: 0px; */
     animation: none;
 }
 .mario {
@@ -64,7 +64,7 @@ body{
     position: absolute;
 }
 .mario.jump {
-    animation: pulo-mario 1.5s forwards ;
+    animation: pulo-mario 1.1s forwards ;
 }
 .cloud{
     width: 15rem;
@@ -108,7 +108,7 @@ body{
     color: rgb(216, 10, 10);
     position: absolute;
     text-align:center;
-    bottom: 5rem;
+    bottom: 10rem;
     width: 100%;
     position: absolute;
     font-family: "Poppins";
@@ -135,52 +135,29 @@ body{
     color: rgb(250, 250, 250);
     font-size: 5rem;
 }
-/* .crono-time{
 
-} */
 /* rodape */
 footer{
-
-    padding: 1rem 0 0 0;
     z-index: 1;
     width: 100%;
     position: fixed;
     bottom: 0;
-  }
-  .footer_socials{
-    color: white;
-    background-color: rgb(17, 17, 60);
-    display: flex;
-    justify-content:center;
-    gap: 3rem;
-    padding: 0.5rem 0;
+    
   }
 
-  
-  .footer_socials li a i{
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.4rem;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    transition: 0.6s;
+  .footer p {
+    font-family: "Poppins";
   }
-  .footer_socials li a i:hover {
-    background-color: rgb(134, 134, 134, 0.4);
-  }
-  
-  .footer_rights{
+
+   .footer_rights{
     background-color: #151212;
     text-align: center;
     bottom: 0;
     color: white;
   }
-  
 @keyframes animacao_pipe {
     from{
-        right: -23px;
+        right: -33px;
     }to{
        right: 100%;
     }
@@ -194,14 +171,11 @@ footer{
     50%{
         bottom: 150px;
     }
-    60%{
-        bottom: 150px;
-    }
    70%{
-        bottom: 150px;
+        bottom: 130px;
     }
     80%{
-        bottom: 130px;
+        bottom: 80px;
     }
     
     100%{
@@ -212,34 +186,44 @@ footer{
 @media (max-width: 600px) {
     .content{
         width: 100%;
-        height: 500px;
         margin-top: 0.5rem;
     }
   
-
     .end_game::after{
-        bottom: 8rem;
+        bottom: 9rem;
     }
 
     body{
         cursor: pointer;
-        height: 56rem;
     }
 }
-
-@media (max-width: 300px) {
+/* moblie modo paissagem */
+@media (max-height:450px) {
     .content{
-        margin-top: 8rem;
         width: 100%;
         height: 100%;
-        margin-top: 0.5rem;
+        margin-top: 0.2rem;
     }
-   /* body{
+   .score{
+    height: 3.8rem;
+    margin-bottom: 0;
     display: flex;
-    position: relative;
-   } */
-
+    align-items: center;
+   }
+   .score h1{
+    font-size: 1.6rem;
+   }
+   .container{
+    height: 100%;
+   }
     .end_game::after{
-        bottom: 8rem;
+        bottom: 4rem;
+    }
+
+    body{
+        height: 25rem;
+        gap: 0;
+        background-color: blueviolet;
     }
 }
+
